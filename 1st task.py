@@ -89,9 +89,10 @@ match type_of_equation:
         if findNSD(a, m) != 1:
             print("Знайти х неможливо, a та m не є взаємно простими")
         else:
-            x = b
+            
+            x = (b * fast_power(a, m-2, m)) % m
 
-        print("Результат: " + result)
+        print("Результат: " + str(x))
     case 4:
 
         print("Введіть а")
